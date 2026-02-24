@@ -3,10 +3,18 @@
     "acknowledgments": [
       {
         "names": [
-          "Shorabh Karir",
-          "Deepak Singh"
+          "Abhishek Pandey"
         ],
-        "summary": "reported these vulnerabilities to CISA"
+        "organization": "Payatu Security Consulting",
+        "summary": "reported CVE-2026-25715, CVE-2026-24455, and CVE-2026-26049 to CISA"
+      },
+      {
+        "names": [
+          "Abhishek Pandey",
+          "Ranit Pradhan"
+        ],
+        "organization": "Payatu Security Consulting",
+        "summary": "reported CVE-2026-26048 to CISA"
       }
     ],
     "category": "csaf_security_advisory",
@@ -27,7 +35,7 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of these vulnerabilities could result in an attacker bypassing authentication, or resetting the device password.",
+        "text": "Successful exploitation of these vulnerabilities could result in authentication being disabled, a denial-of-service condition, or an attacker stealing valid user credentials, including administrator credentials.",
         "title": "Risk evaluation"
       },
       {
@@ -105,13 +113,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-26-041-02 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-041-02.json"
+        "summary": "ICS Advisory ICSA-26-050-03 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-050-03.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-26-041-02 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-041-02"
+        "summary": "ICSA Advisory ICSA-26-050-03 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-03"
       },
       {
         "category": "external",
@@ -159,21 +167,21 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "ZLAN Information Technology Co. ZLAN5143D",
+    "title": "Jinan USR IOT Technology Limited (PUSR) USR-W610",
     "tracking": {
-      "current_release_date": "2026-02-10T07:00:00.000000Z",
+      "current_release_date": "2026-02-19T07:00:00.000000Z",
       "generator": {
-        "date": "2026-02-07T05:41:36.090816Z",
+        "date": "2026-02-18T15:41:58.419343Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-26-041-02",
-      "initial_release_date": "2026-02-10T07:00:00.000000Z",
+      "id": "ICSA-26-050-03",
+      "initial_release_date": "2026-02-19T07:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2026-02-10T07:00:00.000000Z",
+          "date": "2026-02-19T07:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
@@ -190,39 +198,39 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "v1.600",
+                "category": "product_version_range",
+                "name": "<=3.1.1.0",
                 "product": {
-                  "name": "ZLAN Information Technology Co. ZLAN5143D: v1.600",
+                  "name": "Jinan USR IOT Technology Limited (PUSR) USR-W610: <=3.1.1.0",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "ZLAN5143D"
+            "name": "USR-W610"
           }
         ],
         "category": "vendor",
-        "name": "ZLAN Information Technology Co."
+        "name": "Jinan USR IOT Technology Limited (PUSR)"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2026-25084",
+      "cve": "CVE-2026-25715",
       "cwe": {
-        "id": "CWE-306",
-        "name": "Missing Authentication for Critical Function"
+        "id": "CWE-521",
+        "name": "Weak Password Requirements"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Authentication for the device can be bypassed by directly accessing internal URLs.",
+          "text": "The web management interface of the device allows the administrator username and password to be set to blank values. Once applied, the device permits authentication with empty credentials over the web management interface and Telnet service. This effectively disables authentication across all critical management channels, allowing any network-adjacent attacker to gain full administrative control without credentials.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-02-06T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-02-18T07:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -235,12 +243,12 @@
         {
           "category": "external",
           "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/306.html"
+          "url": "https://cwe.mitre.org/data/definitions/521.html"
         },
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2026-25084"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-25715"
         },
         {
           "category": "external",
@@ -256,11 +264,11 @@
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "ZLAN Information Technology Co. did not respond to CISA's attempts at coordination. Users of ZLAN5143D devices are encouraged to contact ZLAN and keep their systems up to date. https://www.zlmcu.com/en/contatct_us.htm",
+          "details": "Jinan USR IOT Technology Limited (PUSR) has stated that the product is end-of-life, and there are no plans to patch. Users of PUSR USR-W610 devices are encouraged to contact PUSR and keep their systems up to date.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "https://www.zlmcu.com/en/contatct_us.htm"
+          "url": "mailto:inquiry@usriot.com"
         }
       ],
       "scores": [
@@ -278,7 +286,145 @@
       ]
     },
     {
-      "cve": "CVE-2026-24789",
+      "cve": "CVE-2026-24455",
+      "cwe": {
+        "id": "CWE-319",
+        "name": "Cleartext Transmission of Sensitive Information"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The embedded web interface of the device does not support HTTPS/TLS for authentication and uses HTTP Basic Authentication. Traffic is encoded but not encrypted, exposing user credentials to passive interception by attackers on the same network.",
+          "title": "Vulnerability Summary"
+        },
+        {
+          "category": "details",
+          "text": "SSVCv2/E:N/A:Y/2026-02-18T07:00:00.000000Z",
+          "title": "SSVC"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/319.html"
+        },
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-24455"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Jinan USR IOT Technology Limited (PUSR) has stated that the product is end-of-life, and there are no plans to patch. Users of PUSR USR-W610 devices are encouraged to contact PUSR and keep their systems up to date.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "mailto:inquiry@usriot.com"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-26049",
+      "cwe": {
+        "id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      },
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The web management interface of the device renders the passwords in a plaintext input field. The current password is directly visible to anyone with access to the UI, potentially exposing administrator credentials to unauthorized observation via shoulder surfing, screenshots, or browser form caching.",
+          "title": "Vulnerability Summary"
+        },
+        {
+          "category": "details",
+          "text": "SSVCv2/E:N/A:N/2026-02-18T07:00:00.000000Z",
+          "title": "SSVC"
+        }
+      ],
+      "product_status": {
+        "known_affected": [
+          "CSAFPID-0001"
+        ]
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "cwe.mitre.org",
+          "url": "https://cwe.mitre.org/data/definitions/522.html"
+        },
+        {
+          "category": "external",
+          "summary": "www.cve.org",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-26049"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N"
+        },
+        {
+          "category": "external",
+          "summary": "www.first.org",
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+        }
+      ],
+      "remediations": [
+        {
+          "category": "vendor_fix",
+          "details": "Jinan USR IOT Technology Limited (PUSR) has stated that the product is end-of-life, and there are no plans to patch. Users of PUSR USR-W610 devices are encouraged to contact PUSR and keep their systems up to date.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "mailto:inquiry@usriot.com"
+        }
+      ],
+      "scores": [
+        {
+          "cvss_v3": {
+            "baseScore": 5.7,
+            "baseSeverity": "MEDIUM",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+            "version": "3.1"
+          },
+          "products": [
+            "CSAFPID-0001"
+          ]
+        }
+      ]
+    },
+    {
+      "cve": "CVE-2026-26048",
       "cwe": {
         "id": "CWE-306",
         "name": "Missing Authentication for Critical Function"
@@ -286,12 +432,12 @@
       "notes": [
         {
           "category": "summary",
-          "text": "An unprotected API endpoint allows an attacker to remotely change the device password without providing authentication.",
+          "text": "The Wi-Fi router is vulnerable to de-authentication attacks due to the absence of Management Frame Protection, allowing forged deauthentication and disassociation frames to be broadcast without authentication or encryption. An attacker can use this to cause unauthorized disruptions and create a denial-of-service condition.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-02-06T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-02-18T07:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -309,35 +455,35 @@
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2026-24789"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-26048"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
           "category": "vendor_fix",
-          "details": "ZLAN Information Technology Co. did not respond to CISA's attempts at coordination. Users of ZLAN5143D devices are encouraged to contact ZLAN and keep their systems up to date. https://www.zlmcu.com/en/contatct_us.htm",
+          "details": "Jinan USR IOT Technology Limited (PUSR) has stated that the product is end-of-life, and there are no plans to patch. Users of PUSR USR-W610 devices are encouraged to contact PUSR and keep their systems up to date.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "https://www.zlmcu.com/en/contatct_us.htm"
+          "url": "mailto:inquiry@usriot.com"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 9.8,
-            "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
             "version": "3.1"
           },
           "products": [

@@ -3,8 +3,7 @@
     "acknowledgments": [
       {
         "names": [
-          "Shorabh Karir",
-          "Deepak Singh"
+          "Adem El Adeb"
         ],
         "summary": "reported these vulnerabilities to CISA"
       }
@@ -27,12 +26,12 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of these vulnerabilities could result in an attacker bypassing authentication, or resetting the device password.",
+        "text": "Successful exploitation of these vulnerabilities may allow remote code execution.",
         "title": "Risk evaluation"
       },
       {
         "category": "other",
-        "text": "Critical Manufacturing",
+        "text": "Critical Manufacturing, Energy, Water and Wastewater",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -42,7 +41,7 @@
       },
       {
         "category": "other",
-        "text": "China",
+        "text": "Russia",
         "title": "Company headquarters location"
       },
       {
@@ -105,13 +104,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-26-041-02 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-041-02.json"
+        "summary": "ICS Advisory ICSA-26-055-01 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-055-01.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-26-041-02 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-041-02"
+        "summary": "ICSA Advisory ICSA-26-055-01 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-055-01"
       },
       {
         "category": "external",
@@ -159,21 +158,21 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "ZLAN Information Technology Co. ZLAN5143D",
+    "title": "InSAT MasterSCADA BUK-TS",
     "tracking": {
-      "current_release_date": "2026-02-10T07:00:00.000000Z",
+      "current_release_date": "2026-02-24T07:00:00.000000Z",
       "generator": {
-        "date": "2026-02-07T05:41:36.090816Z",
+        "date": "2026-02-23T18:58:15.622238Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-26-041-02",
-      "initial_release_date": "2026-02-10T07:00:00.000000Z",
+      "id": "ICSA-26-055-01",
+      "initial_release_date": "2026-02-24T07:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2026-02-10T07:00:00.000000Z",
+          "date": "2026-02-24T07:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
@@ -190,39 +189,39 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "v1.600",
+                "category": "product_version_range",
+                "name": "vers:all/*",
                 "product": {
-                  "name": "ZLAN Information Technology Co. ZLAN5143D: v1.600",
+                  "name": "InSAT MasterSCADA BUK-TS: vers:all/*",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "ZLAN5143D"
+            "name": "MasterSCADA BUK-TS"
           }
         ],
         "category": "vendor",
-        "name": "ZLAN Information Technology Co."
+        "name": "InSAT"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2026-25084",
+      "cve": "CVE-2026-21410",
       "cwe": {
-        "id": "CWE-306",
-        "name": "Missing Authentication for Critical Function"
+        "id": "CWE-89",
+        "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "Authentication for the device can be bypassed by directly accessing internal URLs.",
+          "text": "InSAT MasterSCADA BUK-TS is susceptible to SQL Injection through its main web interface. Malicious users that use the vulnerable endpoint are potentially able to cause remote code execution.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-02-06T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-02-23T07:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -235,12 +234,12 @@
         {
           "category": "external",
           "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/306.html"
+          "url": "https://cwe.mitre.org/data/definitions/89.html"
         },
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2026-25084"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-21410"
         },
         {
           "category": "external",
@@ -255,12 +254,20 @@
       ],
       "remediations": [
         {
-          "category": "vendor_fix",
-          "details": "ZLAN Information Technology Co. did not respond to CISA's attempts at coordination. Users of ZLAN5143D devices are encouraged to contact ZLAN and keep their systems up to date. https://www.zlmcu.com/en/contatct_us.htm",
+          "category": "mitigation",
+          "details": "InSAT has not responded to requests to work with CISA to mitigate these vulnerabilities. Users of the affected products are encouraged to contact info@insat.ru or scada@insat.ru for additional information.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "https://www.zlmcu.com/en/contatct_us.htm"
+          "url": "mailto:info@insat.ru"
+        },
+        {
+          "category": "mitigation",
+          "details": "InSAT has not responded to requests to work with CISA to mitigate these vulnerabilities. Users of the affected products are encouraged to contact info@insat.ru or scada@insat.ru for additional information.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "mailto:scada@insat.ru"
         }
       ],
       "scores": [
@@ -278,20 +285,20 @@
       ]
     },
     {
-      "cve": "CVE-2026-24789",
+      "cve": "CVE-2026-22553",
       "cwe": {
-        "id": "CWE-306",
-        "name": "Missing Authentication for Critical Function"
+        "id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "An unprotected API endpoint allows an attacker to remotely change the device password without providing authentication.",
+          "text": "All versions of InSAT MasterSCADA BUK-TS are susceptible to OS command injection through a field in its MMadmServ web interface. Malicious users that use the vulnerable endpoint are potentially able to cause remote code execution.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-02-06T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-02-23T07:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -304,12 +311,12 @@
         {
           "category": "external",
           "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/306.html"
+          "url": "https://cwe.mitre.org/data/definitions/78.html"
         },
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2026-24789"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-22553"
         },
         {
           "category": "external",
@@ -324,12 +331,20 @@
       ],
       "remediations": [
         {
-          "category": "vendor_fix",
-          "details": "ZLAN Information Technology Co. did not respond to CISA's attempts at coordination. Users of ZLAN5143D devices are encouraged to contact ZLAN and keep their systems up to date. https://www.zlmcu.com/en/contatct_us.htm",
+          "category": "mitigation",
+          "details": "InSAT has not responded to requests to work with CISA to mitigate these vulnerabilities. Users of the affected products are encouraged to contact info@insat.ru or scada@insat.ru for additional information.",
           "product_ids": [
             "CSAFPID-0001"
           ],
-          "url": "https://www.zlmcu.com/en/contatct_us.htm"
+          "url": "mailto:info@insat.ru"
+        },
+        {
+          "category": "mitigation",
+          "details": "InSAT has not responded to requests to work with CISA to mitigate these vulnerabilities. Users of the affected products are encouraged to contact info@insat.ru or scada@insat.ru for additional information.",
+          "product_ids": [
+            "CSAFPID-0001"
+          ],
+          "url": "mailto:scada@insat.ru"
         }
       ],
       "scores": [
