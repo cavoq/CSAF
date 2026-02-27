@@ -2,7 +2,9 @@
   "document": {
     "acknowledgments": [
       {
-        "organization": "Siemens",
+        "names": [
+          "Souvik Kandar"
+        ],
         "summary": "reported this vulnerability to CISA"
       }
     ],
@@ -24,12 +26,12 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of this vulnerability could allow an attacker to perform unauthorized actions on the file system.",
+        "text": "Successful exploitation of this vulnerability could allow attackers to gain unauthorized access to sensitive device data, bypass surveillance controls, and expose facilities to privacy breaches, operational risks, and regulatory compliance issues. ",
         "title": "Risk evaluation"
       },
       {
         "category": "other",
-        "text": "Critical Manufacturing",
+        "text": "Commercial Facilities, Defense Industrial Base, Energy, Government Services and Facilities, Healthcare and Public Health, Transportation Systems",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -39,7 +41,7 @@
       },
       {
         "category": "other",
-        "text": "Germany",
+        "text": "United States",
         "title": "Company headquarters location"
       },
       {
@@ -49,7 +51,7 @@
       },
       {
         "category": "general",
-        "text": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet.",
+        "text": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
         "title": "Recommended Practices"
       },
       {
@@ -89,26 +91,6 @@
       },
       {
         "category": "general",
-        "text": "CISA also recommends users take the following measures to protect themselves from social engineering attacks:",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Do not click web links or open attachments in unsolicited email messages.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Refer to Recognizing and Avoiding Email Scams for more information on avoiding email scams.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "Refer to Avoiding Social Engineering and Phishing Attacks for more information on social engineering attacks.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
         "text": "No known public exploitation specifically targeting this vulnerability has been reported to CISA at this time.",
         "title": "Recommended Practices"
       }
@@ -122,13 +104,13 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSA-26-027-01 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-027-01.json"
+        "summary": "ICS Advisory ICSA-26-057-02 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-057-02.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSA-26-027-01 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-01"
+        "summary": "ICSA Advisory ICSA-26-057-02 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-02"
       },
       {
         "category": "external",
@@ -149,16 +131,6 @@
         "category": "external",
         "summary": "Recommended Practices",
         "url": "https://www.cisa.gov/topics/industrial-control-systems"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/sites/default/files/publications/emailscams0905.pdf"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://www.cisa.gov/uscert/ncas/tips/ST04-014"
       },
       {
         "category": "external",
@@ -186,34 +158,28 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "iba Systems ibaPDA",
+    "title": "Pelco, Inc. Sarix Pro 3 Series IP Cameras",
     "tracking": {
-      "current_release_date": "2026-02-25T07:00:00.000000Z",
+      "current_release_date": "2026-02-26T07:00:00.000000Z",
       "generator": {
-        "date": "2026-02-24T23:55:07.772518Z",
+        "date": "2026-02-25T22:00:28.354882Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSA-26-027-01",
-      "initial_release_date": "2026-01-27T07:00:00.000000Z",
+      "id": "ICSA-26-057-02",
+      "initial_release_date": "2026-02-26T07:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2026-01-27T07:00:00.000000Z",
+          "date": "2026-02-26T07:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
-        },
-        {
-          "date": "2026-02-25T07:00:00.000000Z",
-          "legacy_version": "Housekeeping",
-          "number": "2",
-          "summary": "Housekeeping - Consolidated mitigations section and added a link."
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -223,117 +189,150 @@
           {
             "branches": [
               {
-                "category": "product_version",
-                "name": "8.12.0",
+                "category": "product_version_range",
+                "name": "<=02.52",
                 "product": {
-                  "name": "iba Systems ibaPDA: 8.12.0",
+                  "name": "Pelco, Inc. Sarix Professional IMP 3 Series: <=02.52",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "ibaPDA"
+            "name": "Sarix Professional IMP 3 Series"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=02.52",
+                "product": {
+                  "name": "Pelco, Inc. Sarix Professional IXP 3 Series: <=02.52",
+                  "product_id": "CSAFPID-0002"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Sarix Professional IXP 3 Series"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=02.52",
+                "product": {
+                  "name": "Pelco, Inc. Sarix Professional IBP 3 Series: <=02.52",
+                  "product_id": "CSAFPID-0003"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Sarix Professional IBP 3 Series"
+          },
+          {
+            "branches": [
+              {
+                "category": "product_version_range",
+                "name": "<=02.52",
+                "product": {
+                  "name": "Pelco, Inc. Sarix Professional IWP 3 Series: <=02.52",
+                  "product_id": "CSAFPID-0004"
+                }
+              }
+            ],
+            "category": "product_name",
+            "name": "Sarix Professional IWP 3 Series"
           }
         ],
         "category": "vendor",
-        "name": "iba Systems"
+        "name": "Pelco, Inc."
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-14988",
+      "cve": "CVE-2026-1241",
       "cwe": {
-        "id": "CWE-732",
-        "name": "Incorrect Permission Assignment for Critical Resource"
+        "id": "CWE-288",
+        "name": "Authentication Bypass Using an Alternate Path or Channel"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "A security issue has been identified in ibaPDA that could allow unauthorized actions on the file system under certain conditions. This may impact the confidentiality, integrity, or availability of the system.",
+          "text": "The Pelco, Inc. Sarix Professional 3 Series Cameras are vulnerable to an authentication bypass issue in their web management interface. The flaw stems from inadequate enforcement of access controls, allowing certain functionality to be accessed without proper authentication. This weakness can lead to unauthorized viewing of live video streams, creating privacy concerns and operational risks for organizations relying on these cameras. Additionally, it may expose operators to regulatory and compliance challenges.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-02-24T07:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:Y/2026-02-25T07:00:00.000000Z",
           "title": "SSVC"
         }
       ],
       "product_status": {
         "known_affected": [
-          "CSAFPID-0001"
+          "CSAFPID-0001",
+          "CSAFPID-0002",
+          "CSAFPID-0003",
+          "CSAFPID-0004"
         ]
       },
       "references": [
         {
           "category": "external",
           "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/732.html"
+          "url": "https://cwe.mitre.org/data/definitions/288.html"
         },
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2025-14988"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-1241"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
-          "category": "vendor_fix",
-          "details": "iba Systems recommends users update to ibaPDA v8.12.1 or a later version.",
+          "category": "mitigation",
+          "details": "Pelco, Inc. recommends that all Sarix Professional 3 Series Camera users update their camera firmware to version 02.53 or later. Installing the latest firmware ensures your device receives the most up-to-date bug fixes and critical security enhancements.",
           "product_ids": [
-            "CSAFPID-0001"
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004"
           ]
         },
         {
           "category": "mitigation",
-          "details": "If Installing the update is not possible, iba Systems recommends users: Enable User Management:To activate user management, navigate to User Management settings under the Configure option. Set a password for the admin user to enable user management.",
+          "details": "More information can be found by visiting Pelco, Inc's technical support page (https://www.pelco.com/support) for assistance.",
           "product_ids": [
-            "CSAFPID-0001"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Configure Server Access: To configure, open Server Access Manager (found under Configure in the ibaPDA Client). Set the configuration to restrict access. For example, only 127.0.0.1 (localhost) or specific system IP addresses to communicate with ibaPDA can connect to the ibaPDA Server. (In this example, only connections from localhost are permitted to access ibaPDA.)",
-          "product_ids": [
-            "CSAFPID-0001"
-          ]
-        },
-        {
-          "category": "vendor_fix",
-          "details": "Restrict Connections to Localhost (if ibaPDA is only accessed from the system where it runs): 1) Go to I/O Manager, then General, and deactivate the option /\"Automatically open necessary ports in Windows Firewall./\" (If this option remains active, after a restart of ibaPDA or a restart for data acquisition, the firewall will be reconfigured automatically.) 2) Then, go to Advanced Windows Firewall settings and delete or deactivate all incoming rules for the ibaPDA Client and Server. 3) Manually create firewall rules for the connection used for ibaPDA and verify that the correct ports are configured. For assistance with identifying the ports used by the ibaPDA service can be found in the iba Help Center. 4) Note: After making the changes, verify that all ibaPDA services are operating as expected and that the data acquisition is functioning correctly.",
-          "product_ids": [
-            "CSAFPID-0001"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "For more information you can view iba Systems advisory at https://www.iba-ag.com/de/security/iba-2025-04",
-          "product_ids": [
-            "CSAFPID-0001"
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004"
           ],
-          "url": "https://www.iba-ag.com/de/security/iba-2025-04"
+          "url": "https://www.pelco.com/support"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 9.8,
-            "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 7.5,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
             "version": "3.1"
           },
           "products": [
-            "CSAFPID-0001"
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004"
           ]
         }
       ]
