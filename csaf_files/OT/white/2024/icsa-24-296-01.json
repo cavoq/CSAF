@@ -443,7 +443,7 @@
         },
         {
           "category": "vendor_fix",
-          "details": "Mitsubishi Electric is releasing security updates for GENESIS64 and ICONICS Suite as critical fixes and rollup releases. For more information on these security updates, refer to the Mitsubishi Electric security advisory. The most recent version is available at: https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2024-008_en.pdf.",
+          "details": "Mitsubishi Electric GENESIS64, ICONICS Suite, Hyper Historian, AnalytiX, MobileHMI: Mitsubishi Electric Iconics Digital Solutions and Mitsubishi Electric are releasing security updates for GENESIS64 and ICONICS Suite as critical fixes and rollup releases. For more information on these security updates, please refer to the Mitsubishi Electric security advisory. The most recent version is available at: https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2024-008_en.pdf.",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002",
@@ -593,6 +593,26 @@
             "CSAFPID-0013"
           ],
           "url": "https://www.mitsubishielectric.com/en/psirt/vulnerability/pdf/2024-008_en.pdf"
+        },
+        {
+          "category": "mitigation",
+          "details": "For more information, see the associated Mitsubishi Electric Iconics Digital Solutions whitepaper on security vulnerabilities: https://iconicsinc.my.site.com/community/s/login/",
+          "product_ids": [
+            "CSAFPID-0001",
+            "CSAFPID-0002",
+            "CSAFPID-0003",
+            "CSAFPID-0004",
+            "CSAFPID-0005",
+            "CSAFPID-0006",
+            "CSAFPID-0007",
+            "CSAFPID-0008",
+            "CSAFPID-0009",
+            "CSAFPID-0010",
+            "CSAFPID-0011",
+            "CSAFPID-0012",
+            "CSAFPID-0013"
+          ],
+          "url": "https://iconicsinc.my.site.com/community/s/login/"
         },
 		{
           "category": "mitigation",
