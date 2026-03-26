@@ -3,17 +3,8 @@
     "acknowledgments": [
       {
         "names": [
-          "Billy Rios",
-          "Jesse Young",
-          "Brandon Rothel",
-          "Jonathan Butts",
-          "Henri Hein",
-          "Justin Boling",
-          "Nick Kulesza",
-          "Ken Natividad",
-          "Carl Schuett"
+          "Hussein Amer"
         ],
-        "organization": "the Exploit Development Team - QED Secure Solutions",
         "summary": "reported this vulnerability to CISA"
       }
     ],
@@ -35,12 +26,12 @@
       },
       {
         "category": "summary",
-        "text": "Successful exploitation of this vulnerability could allow an attacker within Bluetooth range to take control over the product.",
+        "text": "Successful exploitation of this vulnerability could allow an authenticated low-privileged user to gain access to SMS messages outside of their authorized tenant scope via a crafted company or tenant identifier parameter. ",
         "title": "Risk evaluation"
       },
       {
         "category": "other",
-        "text": "Healthcare and Public Health",
+        "text": "Communications",
         "title": "Critical infrastructure sectors"
       },
       {
@@ -50,7 +41,7 @@
       },
       {
         "category": "other",
-        "text": "Japan",
+        "text": "Bulgaria",
         "title": "Company headquarters location"
       },
       {
@@ -60,7 +51,7 @@
       },
       {
         "category": "general",
-        "text": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the Internet.",
+        "text": "Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet.",
         "title": "Recommended Practices"
       },
       {
@@ -71,11 +62,6 @@
       {
         "category": "general",
         "text": "When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices.",
-        "title": "Recommended Practices"
-      },
-      {
-        "category": "general",
-        "text": "For more information, contact WHILL Inc.",
         "title": "Recommended Practices"
       },
       {
@@ -138,23 +124,18 @@
     "references": [
       {
         "category": "self",
-        "summary": "ICS Advisory ICSMA-25-364-01 JSON",
-        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2025/icsma-25-364-01.json"
+        "summary": "ICS Advisory ICSA-26-085-02 JSON",
+        "url": "https://raw.githubusercontent.com/cisagov/CSAF/develop/csaf_files/OT/white/2026/icsa-26-085-02.json"
       },
       {
         "category": "self",
-        "summary": "ICSA Advisory ICSMA-25-364-01 - Web Version",
-        "url": "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-25-364-01"
+        "summary": "ICSA Advisory ICSA-26-085-02 - Web Version",
+        "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-085-02"
       },
       {
         "category": "external",
         "summary": "Recommended Practices",
         "url": "https://www.cisa.gov/uscert/ics/alerts/ICS-ALERT-10-301-01"
-      },
-      {
-        "category": "external",
-        "summary": "Recommended Practices",
-        "url": "https://whill.inc/us/customer-support/"
       },
       {
         "category": "external",
@@ -207,34 +188,28 @@
         "url": "https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks"
       }
     ],
-    "title": "WHILL Model C2 Electric Wheelchairs and Model F Power Chairs (Update A)",
+    "title": "OpenCode Systems OC Messaging and USSD Gateway",
     "tracking": {
-      "current_release_date": "2026-03-24T06:00:00.000000Z",
+      "current_release_date": "2026-03-26T06:00:00.000000Z",
       "generator": {
-        "date": "2026-03-23T17:44:30.348586Z",
+        "date": "2026-03-24T18:45:33.743595Z",
         "engine": {
           "name": "CISA CSAF Generator",
           "version": "1.0.0"
         }
       },
-      "id": "ICSMA-25-364-01",
-      "initial_release_date": "2025-12-30T07:00:00.000000Z",
+      "id": "ICSA-26-085-02",
+      "initial_release_date": "2026-03-26T06:00:00.000000Z",
       "revision_history": [
         {
-          "date": "2025-12-30T07:00:00.000000Z",
+          "date": "2026-03-26T06:00:00.000000Z",
           "legacy_version": "Initial",
           "number": "1",
           "summary": "Initial Publication"
-        },
-        {
-          "date": "2026-03-24T06:00:00.000000Z",
-          "legacy_version": "Update A",
-          "number": "2",
-          "summary": "Update A - Revision to mitigation section"
         }
       ],
       "status": "final",
-      "version": "2"
+      "version": "1"
     }
   },
   "product_tree": {
@@ -244,53 +219,53 @@
           {
             "branches": [
               {
-                "category": "product_version_range",
-                "name": "vers:all/*",
+                "category": "product_version",
+                "name": "6.32.2",
                 "product": {
-                  "name": "WHILL Inc. Model C2 Electric WheelChair: vers:all/*",
+                  "name": "OpenCode Systems OC Messaging: 6.32.2",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Model C2 Electric WheelChair"
+            "name": "OC Messaging"
           },
           {
             "branches": [
               {
-                "category": "product_version_range",
-                "name": "vers:all/*",
+                "category": "product_version",
+                "name": "6.32.2",
                 "product": {
-                  "name": "WHILL Inc. Model F Power Chair: vers:all/*",
+                  "name": "OpenCode Systems USSD Gateway: 6.32.2",
                   "product_id": "CSAFPID-0002"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Model F Power Chair"
+            "name": "USSD Gateway"
           }
         ],
         "category": "vendor",
-        "name": "WHILL Inc."
+        "name": "OpenCode Systems"
       }
     ]
   },
   "vulnerabilities": [
     {
-      "cve": "CVE-2025-14346",
+      "cve": "CVE-2025-70614",
       "cwe": {
-        "id": "CWE-306",
-        "name": "Missing Authentication for Critical Function"
+        "id": "CWE-284",
+        "name": "Improper Access Control"
       },
       "notes": [
         {
           "category": "summary",
-          "text": "WHILL Model C2 Electric Wheelchairs and Model F Power Chairs do not enforce authentication for Bluetooth connections. An attacker within range can pair with the device and issue movement commands, override speed restrictions, and manipulate configuration profiles without any credentials or user interaction.",
+          "text": "OpenCode Systems Custom Messaging Gateway 6.32.2 contains a web access vulnerability allowing one authenticated user to gain access to another authenticated user's messages via a crafted identifier parameter.",
           "title": "Vulnerability Summary"
         },
         {
           "category": "details",
-          "text": "SSVCv2/E:N/A:Y/2026-03-23T06:00:00.000000Z",
+          "text": "SSVCv2/E:N/A:N/2026-03-24T06:00:00.000000Z",
           "title": "SSVC"
         }
       ],
@@ -304,55 +279,49 @@
         {
           "category": "external",
           "summary": "cwe.mitre.org",
-          "url": "https://cwe.mitre.org/data/definitions/306.html"
+          "url": "https://cwe.mitre.org/data/definitions/284.html"
         },
         {
           "category": "external",
           "summary": "www.cve.org",
-          "url": "https://www.cve.org/CVERecord?id=CVE-2025-14346"
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-70614"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          "url": "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
         },
         {
           "category": "external",
           "summary": "www.first.org",
-          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+          "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
         }
       ],
       "remediations": [
         {
           "category": "mitigation",
-          "details": "WHILL has released Model C2: HMI v2.24. This firmware includes a modification to disable the BLE interface after installation.",
+          "details": "The vulnerability was identified by OpenCode Systems on January 5, 2026 and remediated on January 6, 2026 with the release of version 6.33.11.",
           "product_ids": [
-            "CSAFPID-0001"
-          ]
-        },
-        {
-          "category": "mitigation",
-          "details": "WHILL has released Model F: HMI v2.25. This firmware includes a modification to disable the BLE interface after installation.",
-          "product_ids": [
+            "CSAFPID-0001",
             "CSAFPID-0002"
           ]
         },
         {
           "category": "mitigation",
-          "details": "For more information, contact WHILL Inc. (https://whill.inc/us/contact/)",
+          "details": "For more information, contact OpenCode: https://opencode.com/about/contact-us",
           "product_ids": [
             "CSAFPID-0001",
             "CSAFPID-0002"
           ],
-          "url": "https://whill.inc/us/contact/"
+          "url": "https://opencode.com/about/contact-us"
         }
       ],
       "scores": [
         {
           "cvss_v3": {
-            "baseScore": 9.8,
-            "baseSeverity": "CRITICAL",
-            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 8.1,
+            "baseSeverity": "HIGH",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
             "version": "3.1"
           },
           "products": [
