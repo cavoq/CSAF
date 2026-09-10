@@ -227,13 +227,13 @@
                 "category": "product_version_range",
                 "name": "<=2025_SP1_P1_build_7.1.9580.8513",
                 "product": {
-                  "name": "AVEVA AVEVA Pipeline Integrity Monitor: <=2025_SP1_P1_build_7.1.9580.8513",
+                  "name": "AVEVA Pipeline Integrity Monitor: <=2025_SP1_P1_build_7.1.9580.8513",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "AVEVA Pipeline Integrity Monitor"
+            "name": "Pipeline Integrity Monitor"
           }
         ],
         "category": "vendor",

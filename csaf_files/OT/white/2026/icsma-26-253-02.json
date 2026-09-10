@@ -222,13 +222,13 @@
                 "category": "product_version_range",
                 "name": "<1.13.0.",
                 "product": {
-                  "name": "Orthanc Orthanc DICOM Server: <1.13.0.",
+                  "name": "Orthanc DICOM Server: <1.13.0.",
                   "product_id": "CSAFPID-0001"
                 }
               }
             ],
             "category": "product_name",
-            "name": "Orthanc DICOM Server"
+            "name": "DICOM Server"
           }
         ],
         "category": "vendor",
