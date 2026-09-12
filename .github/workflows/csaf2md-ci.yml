@@ -52,7 +52,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        family: ["it", "ot"]
+        family: ["it", "ot", "va"]
     defaults:
       run:
         working-directory: tools/csaf2md
@@ -80,3 +80,7 @@ jobs:
       - name: Run smoke tests (OT)
         if: matrix.family == 'ot'
         run: uv run pytest -q tests/test_smoke.py -k "ot_"
+
+      - name: Run smoke tests (VA)
+        if: matrix.family == 'va'
+        run: uv run pytest -q tests/test_smoke.py -k "va_"

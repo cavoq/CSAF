@@ -41,9 +41,9 @@ def snapshot_cases() -> List[Tuple[str, Path, Path]]:
 
 def smoke_cases() -> List[Tuple[str, Path]]:
     # Cover all advisory files under year folders:
-    # csaf_files/<IT|OT>/white/<YYYY>/*.json
+    # csaf_files/<IT|OT|VA>/white/<YYYY>/*.json
     cases: List[Tuple[str, Path]] = []
-    for family in ("IT", "OT"):
+    for family in ("IT", "OT", "VA"):
         base = REPO_ROOT / "csaf_files" / family / "white"
         for input_path in sorted(base.glob("[0-9][0-9][0-9][0-9]/*.json")):
             label = f"{family.lower()}_{input_path.stem}"
